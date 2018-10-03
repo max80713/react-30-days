@@ -1,7 +1,5 @@
 let index = 0;
 
-
-
 setInterval(() => {
   index += 1;
   const li = React.createElement('li', {}, '第一項'); 
@@ -12,3 +10,4 @@ setInterval(() => {
 
   ReactDOM.render(ul, document.getElementById('root'));
 }, 1000);
+
