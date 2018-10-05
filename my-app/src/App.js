@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Example from './Example';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
+          <Example />
+          <Example />
+          <Example />
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +21,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            I like to learn React
           </a>
         </header>
       </div>
