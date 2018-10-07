@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Example() {
+function Example(props) {
   return (
     <div>
       <h1>Hello!</h1>
-      <h2>React!</h2>
+      <h2>{props.text}</h2>
     </div>
   );
 }
