@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Example from './Example';
-import ExampleClassComponet from './ExampleClassComponent';
+import MyButton from './MyButton';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="pp">
         <header className="App-header">
-          <ExampleClassComponet text={'React'} />
-          <ExampleClassComponet text={'Component'} />
-          <ExampleClassComponet text={'props'} />
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -24,6 +20,7 @@ class App extends Component {
           >
             I like to learn React
           </a>
+          <MyButton text={"我是按鈕"}/>
         </header>
       </div>
     );
