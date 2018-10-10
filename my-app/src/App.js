@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import MyButton from './MyButton';
+import MyButtonUsingState from './MyButtonUsingState';
 
 class App extends Component {
   render() {
@@ -20,7 +20,7 @@ class App extends Component {
           >
             I like to learn React
           </a>
-          <MyButton text={"我是按鈕"}/>
+          <MyButtonUsingState text={"我是按鈕"}/>
         </header>
       </div>
     );
