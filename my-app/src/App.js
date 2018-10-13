@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import ControlledForm from './ControlledForm';
+import Clock from './Clock';
 
 class App extends Component {
   render() {
     return (
-      <ControlledForm />
+      <Clock />
     );
   }
 }
