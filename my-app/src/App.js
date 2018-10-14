@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Clock from './Clock';
+import ClockWithSwitch from './ClockWithSwitch';
 
 class App extends Component {
   render() {
     return (
-      <Clock />
+      <ClockWithSwitch />
     );
   }
 }
