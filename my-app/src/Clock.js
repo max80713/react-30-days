@@ -1,6 +1,8 @@
 import React from 'react';
 
 class Clock extends React.Component {
+  timeRef = React.createRef()
+
   state = {
     time: new Date()
   }
@@ -17,8 +19,16 @@ class Clock extends React.Component {
     clearInterval(this.interval);
   }
 
+  componentDidUpdate() {
+    if (this.state.time.getSeconds() % 5 === 0) {
+      this.timeRef.current.style.color = 'red';
+    } else {
+      this.timeRef.current.style.color = 'black';
+    }
+  }
+
   render() {
-    return <div>{this.state.time.toLocaleTimeString()}</div>
+    return <div ref={this.timeRef}>{this.state.time.toLocaleTimeString()}</div>
   }
 }
 
