@@ -1,4 +1,5 @@
 import React from 'react';
+import ClockDate from './ClockDate';
 
 class Clock extends React.Component {
   timeRef = React.createRef()
@@ -28,7 +29,12 @@ class Clock extends React.Component {
   }
 
   render() {
-    return <div ref={this.timeRef}>{this.state.time.toLocaleTimeString()}</div>
+    return (
+      <div>
+        <ClockDate dateString={this.state.time.toLocaleDateString()} />
+        <div ref={this.timeRef}>{this.state.time.toLocaleTimeString()}</div>
+      </div>
+    );
   }
 }
 
