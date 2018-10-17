@@ -1,20 +1,14 @@
 import React from 'react';
 
-class ClockDate extends React.Component {
+class ClockDate extends React.PureComponent {
   componentDidUpdate() {
     console.log('componentDidUpdate');
   }
 
-  shouldComponentUpdate(prevProps, prevState) {
-    if (prevProps.dateString === this.props.dateString) {
-      return false;
-    } else {
-      return true;
-    }
-  }
-
   render() {
-    return this.props.dateString;
+    const { year, month, date } = this.props;
+
+    return `${year}年${month}月${date}日`;
   }
 }
 
