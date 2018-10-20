@@ -1,4 +1,5 @@
 import React from 'react';
+import { Context } from './App';
 
 class ClockDate extends React.PureComponent {
   componentDidUpdate() {
@@ -8,7 +9,15 @@ class ClockDate extends React.PureComponent {
   render() {
     const { year, month, date } = this.props;
 
-    return `${year}年${month}月${date}日`;
+    return (
+      <Context.Consumer>
+        {value => (
+          <div style={{ color: value }}>
+            {`${year}年${month}月${date}日`}
+          </div>
+        )}
+      </Context.Consumer>
+    );
   }
 }
 

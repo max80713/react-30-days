@@ -14,6 +14,8 @@ const options = [{
   text: '藍色',
 }];
 
+export const Context = React.createContext();
+
 class App extends Component {
   state = {
     selectedValue: 'red'
@@ -35,7 +37,9 @@ class App extends Component {
           options={options}
           selectedValue={this.state.selectedValue}
         />
-        <ClockWithSwitch />
+        <Context.Provider value={this.state.selectedValue}>
+          <ClockWithSwitch/>
+        </Context.Provider>
       </div>
     );
   }

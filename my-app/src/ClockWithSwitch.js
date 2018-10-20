@@ -18,7 +18,7 @@ class ClockWithSwitch extends React.Component {
     return (
       <div>
         <input type="checkbox" checked={this.state.checked} onChange={this.handleChange}/>
-        {this.state.checked ? <Clock /> : null}
+        {this.state.checked ? <Clock/> : null}
       </div>
     )
   }
