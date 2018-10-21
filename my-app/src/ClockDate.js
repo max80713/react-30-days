@@ -13,7 +13,7 @@ class ClockDate extends React.PureComponent {
       <Context.Consumer>
         {value => (
           <div style={{ color: value }}>
-            {`${year}年${month}月${date}日`}
+            {this.props.render(year, month, date)}
           </div>
         )}
       </Context.Consumer>

@@ -18,7 +18,15 @@ class Clock extends React.Component {
 
     return (
       <div>
-        <ClockDate year={currentTime.getFullYear()} month={currentTime.getMonth() + 1} date={currentTime.getDate()} />
+        <ClockDate year={currentTime.getFullYear()} month={currentTime.getMonth() + 1} date={currentTime.getDate()} render={(year, month, date) => {
+          return `${year}年${month}月${date}日`;
+        }}/>
+        <ClockDate year={currentTime.getFullYear()} month={currentTime.getMonth() + 1} date={currentTime.getDate()} render={(year, month, date) => {
+          return `${year}/${month}/${date}`;
+        }}/>
+        <ClockDate year={currentTime.getFullYear()} month={currentTime.getMonth() + 1} date={currentTime.getDate()} render={(year, month, date) => {
+          return `${year}-${month}-${date}`;
+        }}/>
         <div ref={this.timeRef}>{currentTime.toLocaleTimeString()}</div>
       </div>
     );
