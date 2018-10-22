@@ -1,7 +1,15 @@
 import React from 'react';
 import { Context } from './App';
+import PropTypes from 'prop-types';
 
 class ClockDate extends React.PureComponent {
+  static propTypes = {
+    year: PropTypes.string.isRequired,
+    month: PropTypes.number.isRequired,
+    date: PropTypes.number.isRequired,
+    render: PropTypes.func.isRequired,
+  }
+
   componentDidUpdate() {
     console.log('componentDidUpdate');
   }
