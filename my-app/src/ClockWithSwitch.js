@@ -2,6 +2,8 @@ import React from 'react';
 import Clock from './Clock';
 import Timer from './Timer';
 
+import ReactDOM from 'react-dom';
+
 class ClockWithSwitch extends React.Component {
   state = {
     checked: false,
@@ -19,7 +21,7 @@ class ClockWithSwitch extends React.Component {
     return (
       <div>
         <input type="checkbox" checked={this.state.checked} onChange={this.handleChange}/>
-        {this.state.checked ? <Clock/> : null}
+        {this.state.checked ? ReactDOM.createPortal(<Clock/>, document.getElementById('clock-root')) : null}
         {this.state.checked ? <Timer/> : null}
       </div>
     )
