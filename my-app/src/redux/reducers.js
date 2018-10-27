@@ -1,8 +1,10 @@
+import { combineReducers } from 'redux';
+
 const initialState = {
   checked: false,
 }
 
-function checkbox(previousState, action) {
+function checkbox(previousState = initialState, action) {
   switch(action.type) {
     case 'CHECK': 
       return {
@@ -21,4 +23,6 @@ function checkbox(previousState, action) {
   }
 }
 
-export default checkbox;
+export default combineReducers({
+  checkbox,
+});
