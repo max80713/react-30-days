@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ClockWithSwitchWithStore from './ClockWithSwitchWithStore';
+import ClockWithSwitch from './ClockWithSwitchContainer';
 import Select from './Select';
 
 const options = [{
@@ -38,7 +38,7 @@ class App extends Component {
           selectedValue={this.state.selectedValue}
         />
         <Context.Provider value={this.state.selectedValue}>
-          <ClockWithSwitchWithStore/>
+          <ClockWithSwitch/>
         </Context.Provider>
       </div>
     );
