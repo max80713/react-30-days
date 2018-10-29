@@ -11,10 +11,9 @@ function uncheck() {
 }
 
 
-function toggleCheckbox(checked) {
+function toggleCheckbox() {
   return {
     type: 'TOGGLE_CHECKBOX',
-    checked
   }
 }
 

@@ -16,7 +16,7 @@ function checkbox(previousState = initialState, action) {
       };
     case 'TOGGLE_CHECKBOX':
       return {
-        checked: action.checked
+        checked: !previousState.checked
       };
     default: 
       return previousState;
